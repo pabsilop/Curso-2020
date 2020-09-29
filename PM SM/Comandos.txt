@@ -1,0 +1,14 @@
+#Nueva rama : git branch NOMBRE DE LA RAMA
+#Mover a rama: git checkout NOMBRE DE LA RAMA 
+#Borra rama: git branch -D NOMBRE DE LA RAMA
+#Listar ramas: git branch
+
+git branch develop
+git flow init -f
+git flow feature start nuevo_parrafo
+git branch -a
+git flow feature publish nuevo_parrafo
+git flow feature finish nuevo_parrafo
+git flow hotfix start problema_x
+git flow hotfix finish problema_x
+Para salir del editor :wq
