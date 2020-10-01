@@ -12,3 +12,6 @@ git flow feature finish nuevo_parrafo
 git flow hotfix start problema_x
 git flow hotfix finish problema_x
 Para salir del editor :wq
+
+=================================================================================
+git flow feature start lista_nueva
