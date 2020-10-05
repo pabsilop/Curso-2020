@@ -1,0 +1,5 @@
+5 puntos: PMV + layaout
+2 puntos: Colores + logo + uniformidad + datos reales
+2 puntos: Navegación, no hay caminos sin salida
+1 punto: Originalidad, Detalles. Extras (focos, validación, UX)
+apellidos_nombre.xd
