@@ -1,0 +1,11 @@
+nota=(int(input("Dime la nota que has sacado en el último examen: ")))
+if nota > 0 and nota < 4:
+    print("La nota es insuficiente")
+elif nota == 5 :
+    print("La nota es suficiente")
+elif nota == 6 :
+    print("La nota es bien")
+elif nota >= 7 and nota <= 8 :
+    print("La nota es suficiente")
+elif nota >= 9 and nota <= 10 :
+    print("La nota es sobresaliente")
