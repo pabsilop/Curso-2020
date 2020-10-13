@@ -41,10 +41,63 @@ a=0
 while a <100:
     a+=1
     print(a)
-"""
+
 # 8. Mostrar con un for los números del 1 al 100.
 for i in range(101):
     print(i)
 
-# Implementar un programa en Python que pida un número indeterminado de cadenas de caracteres por el teclado,
+# 9. Implementar un programa en Python que pida un número indeterminado de cadenas de caracteres por el teclado,
 # y cuando se finalice dicha introducción, muestre el listado de palabras.
+salida=1
+lista=[]
+while salida != 0:
+    cadena=str(input("Diga una palabra: "))
+    lista.append(cadena)
+    print("Si quiere parar y ver la lista pulse 0 si no pulse cualquier otro número")
+    salida=int(input("0 - Parar, Otro número - Otra palabra: "))
+print(lista)
+
+# 10. Realiza la misma operación del ejercicio anterior pero con números
+salida=1
+lista=[]
+while salida != 0:
+    numero=int(input("Diga un número: "))
+    lista.append(numero)
+    print("Si quiere parar y ver la lista pulse 0 si no pulse cualquier otro número")
+    salida=int(input("0 - Parar, Otro número - Otra número: "))
+print(lista)
+
+# 11. Escribe un programa que pida primero un número entero y después pida números enteros hasta
+# que la suma de los números introducidos coincida con el número inicial. El programa termina escribiendo la lista de números.
+
+# 12. Escribe un programa que genere un número aleatorio entre 0 y 10 y nos pida adivinarlo Tenemos 3 intentos.
+import random
+numeroRandom=random.randint(0,10)
+intentos=0
+print("Se ha generado un número aleatorio, entre el 0 y el 10, tiene tres intentos para adivinarlo")
+while intentos<=2:
+    numeroElegido=int(input("Introduzca el número que cree que es: "))
+    if numeroRandom==numeroElegido:
+        print("Respuesta correcta")
+        intentos=3
+    else:
+        print("Respuesta incorrecta, pruebe otra vez")
+        intentos+=1
+print("Felicidades si lo acertaste, si no otra vez será")
+"""
+
+# 13. Implementa una función que calcule el factorial de un número. Recuerda que el factorial de un número es el
+# producto de todos los números desde ese número hasta 1. Por ejemplo, el factorial de 3, 3!, es 6
+
+# 14. Crea una función en python, triangulo, que reciba un número entero, e imprima un patrón como este por pantalla
+tamaño = int(input("Diga el tamaño que quiere que tenga el triángulo: "))
+
+for i in range(1, tamaño + 1):
+    for j in range(i):
+        print("* ", end="")
+    print()
+
+for i in range(1, tamaño):
+    for j in range(tamaño - i):
+        print("* ", end="")
+    print()
