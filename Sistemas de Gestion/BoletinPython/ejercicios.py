@@ -1,4 +1,4 @@
-""""# 1. Imprimir “Hola mundo” por pantalla.
+# 1. Imprimir “Hola mundo” por pantalla.
 print("Hola Mundo")
 
 # 2. Crear dos variables numéricas, sumarlas y mostrar el resultado
@@ -67,9 +67,6 @@ while salida != 0:
     salida=int(input("0 - Parar, Otro número - Otra número: "))
 print(lista)
 
-# 11. Escribe un programa que pida primero un número entero y después pida números enteros hasta
-# que la suma de los números introducidos coincida con el número inicial. El programa termina escribiendo la lista de números.
-
 # 12. Escribe un programa que genere un número aleatorio entre 0 y 10 y nos pida adivinarlo Tenemos 3 intentos.
 import random
 numeroRandom=random.randint(0,10)
@@ -84,10 +81,18 @@ while intentos<=2:
         print("Respuesta incorrecta, pruebe otra vez")
         intentos+=1
 print("Felicidades si lo acertaste, si no otra vez será")
-"""
+
 
 # 13. Implementa una función que calcule el factorial de un número. Recuerda que el factorial de un número es el
 # producto de todos los números desde ese número hasta 1. Por ejemplo, el factorial de 3, 3!, es 6
+numero = int(input("Diga el número del cual quiere calcular el factorial: "))
+factorial = 1
+
+for i in range(1,numero+1):
+    factorial *= i
+
+print ("El factorial de ",numero)
+print (factorial)
 
 # 14. Crea una función en python, triangulo, que reciba un número entero, e imprima un patrón como este por pantalla
 tamaño = int(input("Diga el tamaño que quiere que tenga el triángulo: "))
@@ -101,3 +106,79 @@ for i in range(1, tamaño):
     for j in range(tamaño - i):
         print("* ", end="")
     print()
+
+# 15. Escribe un programa en python que, dada una lista (y haciendo uso de la función type)
+# imprima cada elemento de la lista, indicando su tipo.
+# Por ejemplo, la lista podría ser la siguiente:
+# [1452, 11.23, 1+2j, True, 'w3resource', (0, -1), [5, 12], {"class":'V', "section":'A'}]
+
+lista=[1452, 11.23, 1+2j, True, 'w3resource', (0, -1), [5, 12]]
+print(type(lista))
+for i in range(len(lista)):
+     print(lista[i])
+     print(type(lista[i]))
+
+# 16. Escribe un programa que sea capaz de escribir los N primeros números de la sucesión de fibonacci.
+nterminos = int(input("Cúantos terminos? "))
+numero1=0
+numero2=1
+contador = 0
+print("Sucesion de Fibonacci:")
+while contador < nterminos:
+       print(numero1)
+       suma = numero1 + numero2
+       numero1 = numero2
+       numero2 = suma
+       contador += 1
+
+# 17. Escribe un programa en Python que, dada una lista de elementos, nos muestre la misma pero sin elementos
+# duplicados (investiga, y verás que es muy fácil)
+lista = [1,5,6,2,1,6,8,3,5,7,4,4,4,4,21,21,'a','a']
+resultado = []
+for i in lista:
+    if i not in resultado:
+        resultado.append(i)
+print(resultado)
+
+# 18. Escribe un programa que, de forma indefinida, nos permita jugar a piedra, papel, tijera
+# (y si te atreves, lagarto, Spock) contra el ordenador.
+import random
+
+nAleatorio = random.randrange(0, 3)
+eleccionOrdenador = ""
+opcion=0
+print("Pulsa uno para elegir piedra")
+print("Pulsa dos para elegir papel")
+print("Pulsa tres para elegir tijeras")
+opcion = int(input("Que quieres elegir: "))
+if opcion == 1:
+    miEleccion = "Piedra"
+elif opcion == 2:
+    miEleccion = "Papel"
+elif opcion == 3:
+    miEleccion = "Tijera"
+print("Has escogido: ", miEleccion)
+if nAleatorio == 0:
+    eleccionOrdenador = "Piedra"
+elif nAleatorio == 1:
+    eleccionOrdenador = "Papel"
+elif nAleatorio == 2:
+    eleccionOrdenador = "Tijera"
+print("PC ha escogido: ", eleccionOrdenador)
+
+if eleccionOrdenador == "Piedra" and miEleccion == "Papel":
+    print("Ganaste, papel gana a piedra")
+elif eleccionOrdenador == "Papel" and miEleccion == "Tijera":
+    print("Ganaste, Tijera gana a papel")
+elif eleccionOrdenador == "Tijera" and miEleccion == "Piedra":
+    print("Ganaste, Piedra pisa gana a tijera")
+if eleccionOrdenador == "Papel" and miEleccion == "Piedra":
+    print("perdiste, papel gana a piedra")
+elif eleccionOrdenador == "Tijera" and miEleccion == "Papel":
+    print("perdiste, Tijera gana a papel")
+elif eleccionOrdenador == "Piedra" and miEleccion == "Tijera":
+    print("perdiste, Piedra gana a tijera")
+elif eleccionOrdenador == miEleccion:
+    print("empate")
+
+
